@@ -207,5 +207,3 @@ numbers[0] = 100;
 // Function-scoped hota hai.
 ```
 ````
-
-Ye zyada **normal notes / khud likhe hue learning code** jaisa lagega.
