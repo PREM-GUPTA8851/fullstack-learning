@@ -1,9 +1,7 @@
-# About Js Basics..
+# About Basics
 ````markdown
 ```javascript
-// ============================================================
-// 1. CONST
-// ============================================================
+// CONST
 
 const accountId = 144553;
 // const se variable declare kiya.
@@ -18,9 +16,7 @@ const accountId = 144553;
 // Same scope me const variable ko dobara declare nahi kar sakte.
 
 
-// ============================================================
-// IMPORTANT: const object/array ke andar ki value change ho sakti hai
-// ============================================================
+// const object/array ke andar ki value change ho sakti hai
 
 const user = {
     name: "Prem"
@@ -39,9 +35,7 @@ user.age = 21;
 // Pura object kisi naye object se replace nahi kar sakte.
 
 
-// ============================================================
-// 2. LET
-// ============================================================
+// LET
 
 let accountEmail = "hitesh@google.com";
 // let se variable declare kiya.
@@ -55,10 +49,6 @@ accountEmail = "prem@gmail.com";
 // Same scope me let ko dobara declare nahi kar sakte.
 
 
-// ============================================================
-// LET KE SAATH REASSIGNMENT
-// ============================================================
-
 let age = 21;
 // age ki initial value 21 hai.
 
@@ -69,9 +59,7 @@ age = 23;
 // Value ko kitni bhi baar reassign kar sakte hain.
 
 
-// ============================================================
-// 3. VAR
-// ============================================================
+// VAR
 
 var accountPassword = "12345";
 // var se variable declare kiya.
@@ -84,9 +72,7 @@ var accountPassword = "newPassword";
 // Isi wajah se kabhi-kabhi bugs create ho sakte hain.
 
 
-// ============================================================
-// REASSIGNMENT vs REDECLARATION
-// ============================================================
+// Reassignment vs Redeclaration
 
 let x = 10;
 // Pehli baar x declare kiya.
@@ -124,9 +110,7 @@ var z = 30;
 // Ye redeclaration hai.
 
 
-// ============================================================
-// BLOCK SCOPE KA DIFFERENCE
-// ============================================================
+// Block scope ka difference
 
 let a = 10;
 // Ye outer block ka a hai.
@@ -172,9 +156,7 @@ console.log(c); // 20
 // Same c ki value 20 ho chuki hai.
 
 
-// ============================================================
-// EK AUR IMPORTANT EXAMPLE
-// ============================================================
+// Ek aur example
 
 let score = 100;
 // let variable declare kiya.
@@ -190,9 +172,7 @@ const maxScore = 500;
 // const variable ko reassign nahi kar sakte.
 
 
-// ============================================================
-// ARRAY KE SAATH CONST
-// ============================================================
+// Array ke saath const
 
 const numbers = [1, 2, 3];
 // numbers array ka reference constant hai.
@@ -208,9 +188,7 @@ numbers[0] = 100;
 // Pura array kisi naye array se replace nahi kar sakte.
 
 
-// ============================================================
-// FINAL SUMMARY
-// ============================================================
+// Short summary
 
 // const:
 // Reassign nahi kar sakte.
@@ -229,3 +207,5 @@ numbers[0] = 100;
 // Function-scoped hota hai.
 ```
 ````
+
+Ye zyada **normal notes / khud likhe hue learning code** jaisa lagega.
