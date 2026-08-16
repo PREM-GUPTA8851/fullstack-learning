@@ -1,4 +1,6 @@
-# About JS
+# About Js Basics..
+````markdown
+```javascript
 // ============================================================
 // 1. CONST
 // ============================================================
@@ -225,3 +227,5 @@ numbers[0] = 100;
 // Same scope me redeclare bhi kar sakte hain.
 // Block-scoped nahi hota.
 // Function-scoped hota hai.
+```
+````
