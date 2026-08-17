@@ -377,3 +377,274 @@ console.log(typeof {});
 // object    -> Multiple values ko ek structure me store karta hai
 ```
 ````
+
+# About Conversion_Operations
+```javascript
+let score = "hitesh";
+// score me "hitesh" ek string hai.
+
+console.log(typeof score);
+// typeof variable ka data type batata hai.
+// Output: string
+
+console.log(typeof(score));
+// typeof score aur typeof(score) dono same hain.
+// Output: string
+
+
+let valueInNumber = Number(score);
+// Number() string ya kisi aur value ko number me convert karne ki koshish karta hai.
+// Lekin "hitesh" valid number nahi hai.
+// Isliye valueInNumber ki value NaN banegi.
+
+console.log(typeof valueInNumber);
+// NaN ka typeof "number" hota hai.
+// Output: number
+
+console.log(valueInNumber);
+// Output: NaN
+// NaN ka matlab Not a Number.
+
+
+// String ko Number me convert karne ke examples
+
+// "33" => 33
+// Valid numeric string number ban sakti hai.
+
+// "33abc" => NaN
+// Isme number ke saath characters hain,
+// isliye Number() ise valid number me convert nahi kar sakta.
+
+// true => 1
+// false => 0
+
+
+let isLoggedIn = "hitesh";
+// isLoggedIn me ek non-empty string store hai.
+
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+// Boolean() kisi bhi value ko true ya false me convert karta hai.
+// "hitesh" empty string nahi hai, isliye true banega.
+
+console.log(booleanIsLoggedIn);
+// Output: true
+
+
+// Number ko Boolean me convert karne ke examples
+
+// 1 => true
+// 0 => false
+
+// "" => false
+// Empty string false ban jaati hai.
+
+// "hitesh" => true
+// Koi bhi non-empty string true ban jaati hai.
+
+
+// Kuch aur important conversions:
+
+// Boolean(1) => true
+// Boolean(0) => false
+// Boolean(-1) => true
+
+// Boolean(null) => false
+// Boolean(undefined) => false
+// Boolean(NaN) => false
+
+
+let someNumber = 33;
+// someNumber ki value number type me hai.
+
+let stringNumber = String(someNumber);
+// String() number ko string me convert karta hai.
+// Ab value "33" hai.
+
+console.log(stringNumber);
+// Output: 33
+
+console.log(typeof stringNumber);
+// Output: string
+
+
+// Operations
+
+let value = 3;
+// value ki value 3 hai.
+
+let negValue = -value;
+// - lagane se positive value negative ban jaati hai.
+// negValue = -3
+
+console.log(negValue);
+// Output: -3
+
+
+console.log(2 + 2);
+// Addition
+// Output: 4
+
+console.log(2 - 2);
+// Subtraction
+// Output: 0
+
+console.log(2 * 2);
+// Multiplication
+// Output: 4
+
+console.log(2 ** 3);
+// ** power operator hai.
+// 2 ki power 3
+// Output: 8
+
+console.log(2 / 3);
+// Division
+// Output: approximately 0.666...
+
+console.log(2 % 3);
+// % remainder deta hai.
+// 2 ko 3 se divide karne par remainder 2 bachta hai.
+// Output: 2
+
+
+let str1 = "hello";
+// Pehli string.
+
+let str2 = " hitesh";
+// Dusri string.
+// Starting me space bhi hai.
+
+let str3 = str1 + str2;
+// + operator strings ko jod deta hai.
+// Is process ko concatenation kehte hain.
+// str3 = "hello hitesh"
+
+console.log(str3);
+// Output: hello hitesh
+
+
+console.log("1" + 2);
+// Pehle operand string hai.
+// Isliye number 2 bhi string ban jayega.
+// Output: "12"
+
+console.log(1 + "2");
+// Ek operand string hai.
+// Isliye result string concatenation hoga.
+// Output: "12"
+
+console.log("1" + 2 + 2);
+// Evaluation left se right hogi.
+//
+// "1" + 2 => "12"
+// "12" + 2 => "122"
+//
+// Output: "122"
+
+console.log(1 + 2 + "2");
+// Evaluation left se right hogi.
+//
+// 1 + 2 => 3
+// 3 + "2" => "32"
+//
+// Output: "32"
+
+
+console.log((3 + 4) * 5 % 3);
+// Pehle brackets solve honge.
+//
+// 3 + 4 = 7
+// 7 * 5 = 35
+// 35 % 3 = 2
+//
+// Output: 2
+
+
+console.log(+true);
+// Unary + Boolean ko number me convert karta hai.
+// true => 1
+// Output: 1
+
+console.log(+"");
+// Unary + empty string ko number me convert karta hai.
+// "" => 0
+// Output: 0
+
+
+let num1, num2, num3;
+// Teen variables declare kiye.
+// Abhi inki value undefined hai.
+
+num1 = num2 = num3 = 2 + 2;
+// Pehle 2 + 2 solve hoga.
+//
+// 2 + 2 = 4
+//
+// num3 = 4
+// num2 = 4
+// num1 = 4
+//
+// Ab tino variables ki value 4 hai.
+
+
+let gameCounter = 100;
+// gameCounter ki initial value 100 hai.
+
+++gameCounter;
+// Ye pre-increment operator hai.
+// Pehle value 1 se increase hogi.
+//
+// gameCounter = 101
+
+console.log(gameCounter);
+// Output: 101
+
+
+// Pre-increment aur Post-increment ka difference
+
+let a = 10;
+// a ki initial value 10 hai.
+
+console.log(++a);
+// Pehle a increase hoga.
+// a = 11
+// Fir 11 print hoga.
+
+
+let b = 10;
+// b ki initial value 10 hai.
+
+console.log(b++);
+// Pehle current value print hogi.
+// Output: 10
+//
+// Uske baad b increase hoga.
+// Ab b = 11
+
+console.log(b);
+// Output: 11
+
+
+// Short summary
+
+// Number(value)
+// Value ko number me convert karta hai.
+
+// Boolean(value)
+// Value ko true ya false me convert karta hai.
+
+// String(value)
+// Value ko string me convert karta hai.
+
+// + with strings
+// String concatenation kar sakta hai.
+
+// +true
+// true ko 1 me convert karta hai.
+
+// ++value
+// Pehle value increase hoti hai, fir use hoti hai.
+
+// value++
+// Pehle current value use hoti hai, fir increase hoti hai.
+```
