@@ -207,3 +207,173 @@ numbers[0] = 100;
 // Function-scoped hota hai.
 ```
 ````
+
+# About Data_Types 
+Haan bhai, ab **JavaScript Data Types** ko bhi tere same style me samajhte hain. Main tera code clean karke, har line ke niche comment me explanation de raha hu. GitHub `.md` file me bhi direct use kar sakta hai.
+
+````markdown id="dy1kzv"
+```javascript
+"use strict";
+// Strict mode JavaScript ko stricter rules ke saath run karne me help karta hai.
+// Kuch common mistakes ko errors me convert kar deta hai.
+// Modern JavaScript me modules aur classes automatically strict mode me hote hain.
+
+
+// alert(3 + 3);
+// Browser me alert ek popup dikhata hai.
+// Lekin Node.js environment me alert available nahi hota.
+
+
+// Code readability important hai.
+
+console.log(3 + 3);
+// Output: 6
+// Code ko aise likhna better hai ki easily readable ho.
+
+console.log("Hitesh");
+// String value console me print hogi.
+
+
+// Variables
+
+let name = "hitesh";
+// name ek string hai.
+// String text data ko represent karta hai.
+
+let age = 18;
+// age ek number hai.
+// JavaScript me integer aur decimal dono ke liye number type use hota hai.
+
+let isLoggedIn = false;
+// boolean type sirf do values rakhta hai:
+// true ya false.
+
+let state;
+// Variable declare kiya hai lekin koi value assign nahi ki.
+// Isliye state ki value undefined hai.
+
+
+// Primitive Data Types
+
+
+// number
+
+let score = 100;
+// Number normal numeric values ke liye use hota hai.
+
+let price = 99.99;
+// Decimal values bhi number type hi hoti hain.
+
+// JavaScript Number safe integer range roughly
+// -(2^53 - 1) se +(2^53 - 1) tak hoti hai.
+
+
+// bigint
+
+let bigNumber = 1234567890123456789012345678901234567890n;
+// Bahut bade integers ke liye BigInt use hota hai.
+// BigInt value ke end me n lagate hain.
+
+
+// string
+
+let firstName = "Hitesh";
+// String text ya characters ko represent karta hai.
+
+let city = 'Delhi';
+// Single quotes ya double quotes dono se string bana sakte hain.
+
+
+// boolean
+
+let isOnline = true;
+// Boolean value true ho sakti hai.
+
+let isAdmin = false;
+// Ya false ho sakti hai.
+// Mostly conditions aur yes/no type situations me use hota hai.
+
+
+// null
+
+let temperature = null;
+// null ka matlab hai intentionally koi value nahi hai.
+// Matlab variable exist karta hai aur usme currently empty value rakhi gayi hai.
+
+
+// undefined
+
+let userState;
+// Variable declare hua hai.
+// Lekin abhi tak koi value assign nahi ki gayi.
+// Isliye iska value undefined hai.
+
+
+// symbol
+
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+// Dono ka description same hai "id".
+// Lekin dono unique values hain.
+
+console.log(id1 === id2); // false
+// Symbol mostly unique identifiers banane ke liye use hota hai.
+
+
+// Object
+
+let user = {
+    name: "Hitesh",
+    age: 18
+};
+// Object multiple related values ko key-value pairs me store karta hai.
+
+console.log(user.name);
+// Output: Hitesh
+
+console.log(user.age);
+// Output: 18
+
+
+// typeof operator
+
+console.log(typeof undefined);
+// Output: "undefined"
+// undefined ka type undefined hota hai.
+
+console.log(typeof null);
+// Output: "object"
+// Ye JavaScript ka historical behavior hai.
+// null actually primitive value hai, lekin typeof null "object" return karta hai.
+
+console.log(typeof "Hitesh");
+// Output: "string"
+
+console.log(typeof 18);
+// Output: "number"
+
+console.log(typeof true);
+// Output: "boolean"
+
+console.log(typeof 123n);
+// Output: "bigint"
+
+console.log(typeof Symbol("id"));
+// Output: "symbol"
+
+console.log(typeof {});
+// Output: "object"
+
+
+// Short summary
+
+// number    -> Normal numbers aur decimal values
+// bigint    -> Bahut bade integers
+// string    -> Text values
+// boolean   -> true ya false
+// null      -> Intentionally empty value
+// undefined -> Value abhi assign nahi hui
+// symbol    -> Unique value
+// object    -> Multiple values ko ek structure me store karta hai
+```
+````
