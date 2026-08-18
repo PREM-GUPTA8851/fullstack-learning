@@ -647,4 +647,67 @@ console.log(b);
 
 // value++
 // Pehle current value use hoti hai, fir increase hoti hai.
+
+// Comparison Operators
+
+console.log(2 > 1);
+// greater than: 2 bada hai 1 se, output true.
+
+console.log(2 >= 1);
+// greater than or equal to, output true.
+
+console.log(2 < 1);
+// less than: 2 chhota nahi hai 1 se, output false.
+
+console.log(2 == 1);
+// loose equality: values compare karta hai, output false.
+
+console.log(2 != 1);
+// values equal nahi hain, output true.
+
+
+// JavaScript comparison se pehle string ko number me convert kar sakta hai.
+
+console.log("2" > 1);
+// "2" number 2 me convert hota hai, isliye true.
+
+console.log("02" > 1);
+// "02" bhi number 2 me convert hota hai, isliye true.
+
+
+// null comparisons thode confusing hain.
+
+console.log(null > 0);
+// null comparison me 0 ban sakta hai, 0 > 0 false hai.
+
+console.log(null == 0);
+// false, kyunki == me null sirf undefined ke equal hota hai.
+
+console.log(null >= 0);
+// null 0 me convert hota hai, 0 >= 0 isliye true.
+
+
+// undefined number me convert hone par NaN behave karta hai.
+
+console.log(undefined == 0);
+// false.
+
+console.log(undefined > 0);
+// false.
+
+console.log(undefined < 0);
+// false.
+
+
+// Strict equality
+
+console.log("2" === 2);
+// false, kyunki value similar hai but types different hain.
+// "2" string hai aur 2 number hai.
+
+
+// Interview rule:
+// ==  value compare karta hai with type conversion.
+// === value aur type dono compare karta hai.
+// Generally JavaScript me === prefer karo.
 ```
