@@ -930,3 +930,95 @@ console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 // Formula me +1 isliye hai taaki max value 20 bhi include ho.
 //  output: 14
 ```
+
+# Date_Basics
+```javascript
+// Dates
+
+let myDate = new Date();
+// Current date aur time ka Date object create karta hai.
+
+// console.log(myDate.toString());
+// Date ko readable string format me print karta hai.
+// Example: Thu Aug 20 2026 21:30:00 GMT+0530
+
+// console.log(myDate.toDateString());
+// Sirf day, month, date aur year deta hai.
+// Example: Thu Aug 20 2026
+
+// console.log(myDate.toLocaleString());
+// Local format me date aur time deta hai.
+// Example: 20/08/2026, 9:30:00 pm
+
+// console.log(typeof myDate);
+// Date ka typeof object hota hai.
+// Output: object
+
+
+// Different ways to create a specific date
+
+// let myCreatedDate = new Date(2023, 0, 23);
+// Numeric constructor me month 0 se start hota hai.
+// 0 = January, isliye date 23 January 2023.
+
+// let myCreatedDate = new Date(2023, 0, 23, 5, 3);
+// Date ke saath time bhi set kar sakte hain.
+// 23 January 2023, 5:03 AM.
+
+// let myCreatedDate = new Date("2023-01-14");
+// String format YYYY-MM-DD me date create karta hai.
+
+let myCreatedDate = new Date("01-14-2023");
+// MM-DD-YYYY format me 14 January 2023 create hoti hai.
+
+// console.log(myCreatedDate.toLocaleString());
+// Local format me created date print karega.
+
+
+let myTimeStamp = Date.now();
+// Current time ka timestamp milliseconds me return karta hai.
+
+// console.log(myTimeStamp);
+// Current time milliseconds me print karega.
+
+// console.log(myCreatedDate.getTime());
+// myCreatedDate ka timestamp milliseconds me return karega.
+
+// console.log(Math.floor(Date.now() / 1000));
+// Milliseconds ko 1000 se divide karke seconds me convert karta hai.
+
+
+let newDate = new Date();
+// Current date aur time store kiya.
+
+console.log(newDate);
+// Current Date object print hoga.
+
+console.log(newDate.getMonth() + 1);
+// getMonth() 0 se start hota hai, isliye +1 karke actual month lete hain.
+// January = 0, February = 1, ... December = 11.
+
+console.log(newDate.getDay());
+// Week ka day number return karta hai.
+// Sunday = 0, Monday = 1, ... Saturday = 6.
+
+
+// `${newDate.getDay()} and the time `
+// Template literal me date/time related values directly use kar sakte hain.
+
+
+newDate.toLocaleString('default', {
+    weekday: "long",
+});
+// Day ka full name return karega, jaise "Thursday".
+// Note: result ko console.log() ya variable me store karna padega,
+// warna yaha kuch print nahi hoga.
+
+console.log(
+    newDate.toLocaleString('default', {
+        weekday: "long",
+    })
+);
+// Output current weekday ka full name hoga.
+// Example: Thursday
+```
