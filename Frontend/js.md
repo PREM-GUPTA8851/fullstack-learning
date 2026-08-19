@@ -209,9 +209,7 @@ numbers[0] = 100;
 ````
 
 # About Data_Types 
-Haan bhai, ab **JavaScript Data Types** ko bhi tere same style me samajhte hain. Main tera code clean karke, har line ke niche comment me explanation de raha hu. GitHub `.md` file me bhi direct use kar sakta hai.
 
-````markdown id="dy1kzv"
 ```javascript
 "use strict";
 // Strict mode JavaScript ko stricter rules ke saath run karne me help karta hai.
@@ -800,4 +798,33 @@ console.log(url.includes('sundar'));
 console.log(gameName.split('-'));
 // split('-') string ko '-' ke basis par array me tod deta hai.
 // Output: [ 'hitesh', 'hc', 'com' ]
+
+const gameName = new String('hitesh-hc-com');
+// String hai: hitesh-hc-com
+
+console.log(gameName);
+// Index:
+//  0 1 2 3 4 5 6 7 8 9 10 11 12
+//  h i t e s h - h c -  c  o  m
+
+
+const anotherString = gameName.slice(-8, 4);
+// -8 ka matlab end se 8th position.
+//
+// String length = 13
+// -8 ko normal index me convert karo:
+//
+// 13 - 8 = 5
+//
+// To actual operation ban gaya:
+//
+// gameName.slice(5, 4)
+//
+// slice(start, end) me start index end se chhota hona chahiye.
+// Yaha 5 > 4 hai.
+//
+// Isliye koi character nahi milega.
+
+console.log(anotherString);
+// Output: ""
 ```
