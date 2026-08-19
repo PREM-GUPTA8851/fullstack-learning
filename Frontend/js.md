@@ -928,5 +928,5 @@ const max = 20;
 console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 // 10 se 20 ke beech random integer deta hai.
 // Formula me +1 isliye hai taaki max value 20 bhi include ho.
-// Example output: 14
+//  output: 14
 ```
