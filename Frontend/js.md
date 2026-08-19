@@ -827,3 +827,106 @@ const anotherString = gameName.slice(-8, 4);
 console.log(anotherString);
 // Output: ""
 ```
+
+# Nums_&_Math
+```javascript
+const score = 400;
+// Normal number value store ki hai.
+
+// console.log(score);
+// Output: 400
+
+
+const balance = new Number(100);
+// Number object create kiya hai.
+// Usually direct number const balance = 100 bhi use karte hain.
+
+
+// console.log(balance);
+// Output: Number {100}
+
+
+console.log(balance.toString().length);
+// toString() number 100 ko "100" string me convert karta hai.
+// length = 3
+// Output: 3
+
+
+console.log(balance.toFixed(1));
+// Decimal ke baad kitne digits chahiye wo specify karte hain.
+// 100 ko 1 decimal place ke saath "100.0" banayega.
+// Output: 100.0
+
+
+const otherNumber = 123.8966;
+// Decimal number hai.
+
+// console.log(otherNumber.toPrecision(4));
+// Total 4 significant digits rakhta hai.
+// Output: 123.9
+
+
+const hundreds = 1000000;
+// Normal number.
+
+// console.log(hundreds.toLocaleString('en-IN'));
+// Indian number format me commas lagata hai.
+// Output: 10,00,000
+
+
+// Maths
+
+// console.log(Math);
+// Math object ke saare mathematical methods dikhata hai.
+
+// console.log(Math.abs(-4));
+// Negative ko positive absolute value me convert karta hai.
+// Output: 4
+
+// console.log(Math.round(4.6));
+// Nearest integer return karta hai.
+// Output: 5
+
+// console.log(Math.ceil(4.2));
+// Hamesha next greater integer deta hai.
+// Output: 5
+
+// console.log(Math.floor(4.9));
+// Hamesha lower integer deta hai.
+// Output: 4
+
+// console.log(Math.min(4, 3, 6, 8));
+// Smallest value return karta hai.
+// Output: 3
+
+// console.log(Math.max(4, 3, 6, 8));
+// Largest value return karta hai.
+// Output: 8
+
+
+console.log(Math.random());
+// 0 inclusive se 1 exclusive ke beech random decimal deta hai.
+// Example output: 0.6734
+
+
+console.log((Math.random() * 10) + 1);
+// Random value ko roughly 1 se 11 ke range me le jata hai.
+// Example output: 7.432
+
+
+console.log(Math.floor(Math.random() * 10) + 1);
+// 1 se 10 ke beech random integer deta hai.
+// Example output: 7
+
+
+const min = 10;
+// Minimum value.
+
+const max = 20;
+// Maximum value.
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+// 10 se 20 ke beech random integer deta hai.
+// Formula me +1 isliye hai taaki max value 20 bhi include ho.
+// Example output: 14
+```
