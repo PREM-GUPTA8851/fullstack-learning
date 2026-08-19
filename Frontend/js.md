@@ -711,3 +711,93 @@ console.log("2" === 2);
 // === value aur type dono compare karta hai.
 // Generally JavaScript me === prefer karo.
 ```
+
+# Strings_Basics 
+```javascript
+const name = "hitesh";
+// name me string value store hai.
+
+const repoCount = 50;
+// repoCount me number value store hai.
+
+// console.log(name + repoCount + " Value");
+// + se strings ko concatenate kar sakte hain.
+
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+// Template literal me ${} ke andar variable directly use kar sakte hain.
+// Output: Hello my name is hitesh and my repo count is 50
+
+
+const gameName = new String('hitesh-hc-com');
+// String object create kiya, jisme string ke methods available hote hain.
+
+// console.log(gameName[0]);
+// Index 0 ka character access karega.
+// Output: h
+
+// console.log(gameName.__proto__);
+// String object ka prototype dikhata hai.
+
+
+// console.log(gameName.length);
+// Total characters count karega.
+// Output: 13
+
+// console.log(gameName.toUpperCase());
+// String ko uppercase me convert karta hai.
+// Output: HITESH-HC-COM
+// Original gameName change nahi hota.
+
+console.log(gameName.charAt(2));
+// Index 2 ka character return karta hai.
+// Output: t
+
+console.log(gameName.indexOf('t'));
+// Character 't' ka first index return karta hai.
+// Output: 2
+
+
+const newString = gameName.substring(0, 4);
+// Index 0 se start karke index 4 se pehle tak characters lega.
+// Output value: hite
+
+console.log(newString);
+// Output: hite
+
+
+const anotherString = gameName.slice(-8, 4);
+// Start index -8 ko string ke end se count karta hai.
+// Yaha calculated start index end index 4 ke baad aata hai, isliye empty string milegi.
+// Output: ""
+
+console.log(anotherString);
+
+
+const newStringOne = "   hitesh    ";
+// String ke start aur end me extra spaces hain.
+
+console.log(newStringOne);
+// Output me spaces ke saath hitesh print hoga.
+
+console.log(newStringOne.trim());
+// trim() starting aur ending spaces remove karta hai.
+// Output: hitesh
+
+
+const url = "https://hitesh.com/hitesh%20choudhary";
+// URL me %20 space ko represent karta hai.
+
+console.log(url.replace('%20', '-'));
+// replace() '%20' ko '-' se replace karta hai.
+// Output: https://hitesh.com/hitesh-choudhary
+
+
+console.log(url.includes('sundar'));
+// includes() check karta hai given text string me present hai ya nahi.
+// Output: false
+
+
+console.log(gameName.split('-'));
+// split('-') string ko '-' ke basis par array me tod deta hai.
+// Output: [ 'hitesh', 'hc', 'com' ]
+```
