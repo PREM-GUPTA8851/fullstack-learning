@@ -1022,3 +1022,75 @@ console.log(
 // Output current weekday ka full name hoga.
 // Example: Thursday
 ```
+
+# Datatype_Summ
+```javascript
+// Primitive Data Types
+
+// 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
+
+const score = 100;
+// Number type.
+
+const scoreValue = 100.3;
+// Decimal bhi JavaScript me Number type hi hota hai.
+
+const isLoggedIn = false;
+// Boolean type, sirf true ya false hota hai.
+
+const outsideTemp = null;
+// null ka matlab intentionally empty value.
+
+let userEmail;
+// Value assign nahi hui, isliye undefined hai.
+
+
+const id = Symbol('123');
+// Symbol unique value create karta hai.
+
+const anotherId = Symbol('123');
+// Description same hone ke baad bhi ye id se different hai.
+
+console.log(id === anotherId);
+// Output: false
+// Har Symbol unique hota hai.
+
+
+// const bigNumber = 3456543576654356754n;
+// End me n lagane se ye BigInt type ban jata hai.
+
+
+// Reference / Non-Primitive Data Types
+
+// Array, Object, Function
+
+const heros = ["shaktiman", "naagraj", "doga"];
+// Array multiple values ko ek variable me store karta hai.
+
+let myObj = {
+    name: "hitesh",
+    age: 22,
+};
+// Object key-value pairs me data store karta hai.
+
+const myFunction = function () {
+    console.log("Hello world");
+};
+// Function ek reusable block of code hai.
+
+
+console.log(typeof anotherId);
+// Output: symbol
+// typeof Symbol value "symbol" return karta hai.
+
+console.log(typeof heros);
+// Output: object
+// JavaScript me Array ka typeof bhi object hota hai.
+
+console.log(typeof myObj);
+// Output: object
+
+console.log(typeof myFunction);
+// Output: function
+// Function ke liye typeof "function" return karta hai.
+```
