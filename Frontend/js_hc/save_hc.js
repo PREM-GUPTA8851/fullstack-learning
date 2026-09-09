@@ -660,3 +660,237 @@ let userTwo = userOne; // reference copy
 userOne.email = "user@newemail.com";
 console.log(userOne)
 console.log(userTwo) // userTwo ki value bhi change ho jaati hai, kyunki reference copy hai, original object ka reference hai; 
+
+// ==================== STRING IN JAVASCRIPT ====================
+
+const work_time = 16;
+// Normal string ke saath variable ko template literal me use kar sakte hain.
+
+console.log(`I work ${work_time} hours a day.`);
+// I work 16 hours a day.
+
+
+// ==================== STRING OBJECT ====================
+
+const gameName = new String("sanskaar");
+// new String() se String object create hota hai.
+
+console.log(gameName[0]);
+// s
+
+console.log(gameName.__proto__);
+// String object ka prototype
+
+console.log(gameName);
+// sanskaar
+
+console.log(gameName.length);
+// 8
+
+console.log(gameName.toUpperCase());
+// SANSKAAR
+
+console.log(gameName);
+// sanskaar
+// Original value change nahi hui because String immutable hoti hai.
+
+
+// ==================== CHARACTER METHODS ====================
+
+const Name = "sanskaar";
+
+console.log(Name.charAt(0));
+// s
+
+console.log(Name.charAt(3));
+// s
+
+console.log(Name.charCodeAt(0));
+// 115
+
+console.log(Name.at(0));
+// s
+
+console.log(Name.at(-1));
+// r
+// at() negative index bhi support karta hai.
+
+
+// ==================== SEARCH METHODS ====================
+
+console.log(Name.indexOf("s"));
+// 0
+
+console.log(Name.indexOf("k"));
+// 4
+
+console.log(Name.indexOf("z"));
+// -1
+// Character nahi mila to -1.
+
+console.log(Name.lastIndexOf("a"));
+// 6
+
+console.log(Name.includes("kaa"));
+// true
+
+console.log(Name.includes("xyz"));
+// false
+
+console.log(Name.startsWith("san"));
+// true
+
+console.log(Name.endsWith("aar"));
+// true
+
+
+// ==================== EXTRACT METHODS ====================
+
+console.log(Name.slice(0, 4));
+// sans
+// Index 0 se 4 se pehle tak.
+
+console.log(Name.slice(4));
+// kaar
+// Index 4 se end tak.
+
+console.log(Name.slice(-4));
+// kaar
+// Negative index end se count hota hai.
+
+console.log(Name.substring(0, 4));
+// sans
+
+console.log(Name.substring(4, 8));
+// kaar
+
+
+// ==================== CASE METHODS ====================
+
+console.log(Name.toUpperCase());
+// SANSKAAR
+
+console.log(Name.toLowerCase());
+// sanskaar
+
+
+// ==================== TRIM METHODS ====================
+
+const text = "   hello world   ";
+
+console.log(text.trim());
+// hello world
+// Starting aur ending ke spaces remove.
+
+console.log(text.trimStart());
+// hello world   
+// Sirf starting spaces remove.
+
+console.log(text.trimEnd());
+//    hello world
+// Sirf ending spaces remove.
+
+
+// ==================== REPLACE METHODS ====================
+
+const message = "hello hello";
+
+console.log(message.replace("hello", "hi"));
+// hi hello
+// Sirf first matching value replace hoti hai.
+
+console.log(message.replaceAll("hello", "hi"));
+// hi hi
+// Saari matching values replace hoti hain.
+
+
+// ==================== SPLIT ====================
+
+const language = "JavaScript";
+
+console.log(language.split(""));
+// ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+// String ko characters ke array me convert karta hai.
+
+console.log("JavaScript-React-Node".split("-"));
+// ["JavaScript", "React", "Node"]
+
+
+// ==================== CONCAT ====================
+
+const firstName = "Prem";
+const lastName = "Gupta";
+
+console.log(firstName.concat(" ", lastName));
+// Prem Gupta
+
+
+// ==================== REPEAT ====================
+
+console.log("JS ".repeat(3));
+// JS JS JS 
+
+
+// ==================== PADDING ====================
+
+console.log("5".padStart(3, "0"));
+// 005
+
+console.log("5".padEnd(3, "0"));
+// 500
+
+
+// ==================== REGEX STRING METHODS ====================
+
+const data = "I have 123 apples";
+
+console.log(data.match(/\d+/));
+// ["123"]
+
+console.log(data.search(/\d+/));
+// 7
+
+
+// ==================== VALUEOF ====================
+
+const strObj = new String("sanskaar");
+
+console.log(strObj.valueOf());
+// sanskaar
+// String object ki primitive string value return karta hai.
+
+
+// ==================== IMPORTANT PROPERTY ====================
+
+console.log(Name.length);
+// 8
+// String ki total length.
+
+
+/*
+IMPORTANT:
+
+String methods jaise:
+
+toUpperCase()
+toLowerCase()
+slice()
+replace()
+trim()
+
+original String ko change nahi karte.
+
+JavaScript String IMMUTABLE hoti hai.
+
+Example:
+
+const name = "sanskaar";
+
+name.toUpperCase();
+
+console.log(name);
+// sanskaar
+
+toUpperCase() ne "SANSKAAR" ki NEW string return ki,
+original "sanskaar" ko modify nahi kiya.
+*/
