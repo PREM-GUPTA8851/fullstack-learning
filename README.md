@@ -574,7 +574,6 @@ Thanks to everyone contributing to this learning journey and helping improve the
 
 | Contributor | Role |
 |---|---|
-| **Sakshi Kumari** | Contributor |
 | **Prem Kumar Gupta** | Contributor |
 
 ---
